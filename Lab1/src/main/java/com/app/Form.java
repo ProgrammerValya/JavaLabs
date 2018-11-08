@@ -1,7 +1,18 @@
-package main.java.com.app;
+package com.app;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JScrollPane;
+import javax.swing.BorderFactory;
+import javax.swing.JOptionPane;
+import java.awt.Font;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,7 +24,7 @@ public class Form extends JFrame {
     private JTextArea resultField;
     private JLabel answerLabel;
     private JTextField inputAnswer;
-
+private JScrollPane resultFieldscrollVoc;
     //требуемый ответ
     private int ans;
     //исходные числа
@@ -21,28 +32,81 @@ public class Form extends JFrame {
 
     public Form() {
         super("Расстановка знаков");
+        this.setBounds(250,150,600,300);
         //Подготавливаем компоненты объекта
-        inputLabel = new JLabel("Введите числа:");
+        inputLabel = new JLabel("Исходные числа:");
         getResult = new JButton("Получить результат");
-        answerLabel = new JLabel("Введите требуемый ответ:");
-        inputAnswer = new JTextField(10);
-        resultField = new JTextArea(2,2);
+        answerLabel = new JLabel("Требуемый ответ:");
+        inputAnswer = new JTextField();
+        resultField = new JTextArea();
         inputNumbers = new JTextField(10);
-        //Подготавливаем временные компоненты
-        JPanel panel1 = new JPanel();
+        resultFieldscrollVoc = new JScrollPane(resultField);
+        resultFieldscrollVoc.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        inputLabel.setHorizontalAlignment(JLabel.CENTER);
+        answerLabel.setHorizontalAlignment(JLabel.CENTER);
+
+        inputLabel.setFont(new Font("Arial", Font.BOLD, 16));
+        answerLabel.setFont(new Font("Arial", Font.BOLD, 16));
+        getResult.setFont(new Font("Arial", Font.BOLD, 16));
+        inputAnswer.setFont(new Font("Arial", Font.BOLD, 16));
+        inputNumbers.setFont(new Font("Arial", Font.BOLD, 16));
+        resultField.setFont(new Font("Arial", Font.BOLD, 16));
 
         //Расставляем компоненты по местам
-        panel1.setLayout(new GridLayout(3,3));
+        JPanel panel1 = new JPanel();
 
+        GridBagLayout gbl = new GridBagLayout();
+        GridBagConstraints c =  new GridBagConstraints();
+        panel1.setLayout(gbl);
+
+        c.anchor = GridBagConstraints.CENTER;
+        c.fill   = GridBagConstraints.HORIZONTAL;
+        c.gridheight = 1;
+        c.gridwidth  = 1;
+        c.gridx = 1;
+        c.gridy = 1;
+        c.insets = new Insets(40, 0, 0, 0);
+        c.ipadx = 0;
+        c.ipady = 0;
+        c.weightx = 1.0;
+        c.weighty = 0.0;
+
+        gbl.setConstraints(inputLabel, c);
+        add(inputLabel);
         panel1.add(inputLabel);
+
+        c.gridx = 2;
+        c.gridy = 1;
+        gbl.setConstraints(inputNumbers, c);
         panel1.add(inputNumbers);
+
+        c.gridx = 1;
+        c.gridy = 2;
+        gbl.setConstraints(answerLabel, c);
         panel1.add(answerLabel);
+
+        c.gridx = 2;
+        c.gridy = 2;
+        gbl.setConstraints(inputAnswer, c);
         panel1.add(inputAnswer);
+
+        c.insets = new Insets(40, 0, 40, 0);
+        c.gridx = 1;
+        c.gridy = 3;
+        c.fill   = GridBagConstraints.NONE;
+        gbl.setConstraints(getResult, c);
         panel1.add(getResult);
-        panel1.add(resultField);
 
+        c.gridx = 2;
+        c.gridy = 3;
+        c.fill   = GridBagConstraints.HORIZONTAL;
+        c.ipady = 50;
+        gbl.setConstraints(resultFieldscrollVoc, c);
+        panel1.add(resultFieldscrollVoc);
+
+        resultField.setEditable(false);
+        panel1.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
         add(panel1);
-
         initListeners();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

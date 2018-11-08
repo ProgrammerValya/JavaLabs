@@ -1,4 +1,4 @@
-package main.java.com.app;
+package com.app;
 //класс, проверяющий, какие комбинации подходят
 
 public class FindVariants {
@@ -8,7 +8,7 @@ public class FindVariants {
         this.ans=ans;
         this.arr=arr;
     }
-    public String findVariants() {   // отд класс
+    public String findVariants() {
         //ищем все варианты
         PermutationsWithRepetition gen = new PermutationsWithRepetition(
                 new char[]{'-', '+', '/', '*'},

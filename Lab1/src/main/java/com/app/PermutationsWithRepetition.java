@@ -1,4 +1,4 @@
-package main.java.com.app;
+package com.app;
 //класс, генерирующий все варианты перестановок
 
 public class PermutationsWithRepetition {

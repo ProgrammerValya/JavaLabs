@@ -1,6 +1,6 @@
-main\java\com\app\Calc.class
-main\java\com\app\FindVariants.class
-main\java\com\app\Form$1.class
-main\java\com\app\PermutationsWithRepetition.class
-main\java\com\app\Main.class
-main\java\com\app\Form.class
+com\app\Calc.class
+com\app\Form.class
+com\app\FindVariants.class
+com\app\PermutationsWithRepetition.class
+com\app\Form$1.class
+com\app\Main.class
