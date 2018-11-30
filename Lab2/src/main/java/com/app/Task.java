@@ -1,4 +1,6 @@
 package com.app;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Task {
     private int maxMark=100; //максимальное количество мл
@@ -9,8 +11,9 @@ public class Task {
     private boolean[][]OA=new boolean[maxMark+1][maxMark+1];// OA-массив, отражающий состояния, в которые можно перейти за одно переливание.
                                                             //(вспомогательный массив)
     private boolean isEnd, isFind ; //isEnd-все варинты просмотрены. isFind-найдено решение
+    private String[] mas=new String[100];
+    Task(int[] inputArr){
 
-     Task(int[] inputArr){
         mark=new int[inputArr.length+1];
         mark[0]=0;
         int j=1;
@@ -28,6 +31,7 @@ public class Task {
         A[maxMark][0] = true;
 
         step=0;
+        mas[0]="Шаг "+Integer.toString(step)+"\n"+"100 0"+"\n";
     }
 
     //метод проверяет, возможно ли x мл в первом сосуде, и y во втором.
@@ -37,7 +41,11 @@ public class Task {
         if ((x>=0) && (y>=0) && (x+y<=100)) {
             if (!A[x][y]) {
                 A[x][y] = true;
-                if (x + y == maxMark - 1) isFind = true; //как только в первом и втором сосуде 99 мл, то решение найдено
+                mas[step]= mas[step]+Integer.toString(x)+" "+Integer.toString(y)+" "+Integer.toString(100-x-y)+"\n";
+                if (x + y == maxMark - 1) {
+                    isFind = true; //как только в первом и втором сосуде 99 мл, то решение найдено
+                    mas[step+1]="Итог: "+Integer.toString(x)+" "+Integer.toString(y)+" "+Integer.toString(100-x-y);
+                }
                 isEnd = false;
             }
         }
@@ -46,6 +54,7 @@ public class Task {
     //основной метод, решающий задачу
     private void getResult(){
         step++;
+        mas[step]= "\n"+"Шаг "+Integer.toString(step)+"\n";
         isEnd = true;
         isFind = false;
        for (int i=0;i<A.length;i++)
@@ -56,6 +65,7 @@ public class Task {
             for (int j=0; j<=maxMark-i;j++)
                 if (OA[i][j])
                 {
+
                     // если перельем из все из третьего сосуда во второй
                     check(i, 100 - i);
                     //если перельем все из третьего сосуда в первый
@@ -80,8 +90,19 @@ public class Task {
 
     public int getAnswer(){
         getResult();
+        try(FileWriter writer = new FileWriter("test.txt", false))
+        {
+            for (int i = 0; i <= step + 1; i++)
+                writer.write(mas[i]);
+            writer.flush();
+        }
+        catch(IOException ex){
+
+            System.out.println(ex.getMessage());
+        }
         if (isFind) return step; else
             return -1;
+
     }
 
 }

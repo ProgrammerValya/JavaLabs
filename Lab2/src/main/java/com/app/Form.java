@@ -1,10 +1,15 @@
 package com.app;
 
 import javax.swing.*;
-import javax.swing.border.Border;
-import java.awt.*;
+import java.awt.Font;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Color;
+import javax.swing.border.Border;
+import java.lang.Exception;
 
 public class Form extends JFrame {
 
@@ -113,7 +118,7 @@ public class Form extends JFrame {
         String[] strNumbers = inputStr.split(" ");
         if (strNumbers.length != Integer.parseInt(spinInt.getValue().toString())) {
             JOptionPane.showMessageDialog(null, "Количество рисок не соответствует заданному");
-            throw new NullPointerException();
+            throw new IllegalArgumentException();
         }
         arr = new int[strNumbers.length];
         int curNum;
@@ -123,7 +128,7 @@ public class Form extends JFrame {
             }
             catch (Exception d){
                 JOptionPane.showMessageDialog(null, "Ошибка ввода");
-                throw new NullPointerException();
+                throw new IllegalArgumentException();
             }
 
             if ((curNum >= 0) && (curNum <= 100)) {
@@ -132,7 +137,7 @@ public class Form extends JFrame {
             }
             else {
                 JOptionPane.showMessageDialog(null, "Можно вводить только от 1 до 100 без повторений");
-                throw new NullPointerException();
+                throw new IllegalArgumentException();
             }
         }
     }
