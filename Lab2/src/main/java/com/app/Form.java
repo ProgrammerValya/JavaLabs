@@ -117,27 +117,23 @@ public class Form extends JFrame {
         inputStr=inputStr.trim();
         String[] strNumbers = inputStr.split(" ");
         if (strNumbers.length != Integer.parseInt(spinInt.getValue().toString())) {
-            JOptionPane.showMessageDialog(null, "Количество рисок не соответствует заданному");
-            throw new IllegalArgumentException();
+
+            throw new IllegalArgumentException("Количество рисок не соответствует заданному");
         }
         arr = new int[strNumbers.length];
         int curNum;
         for (int i = 0; i < strNumbers.length; i++) {
-            try {
+
                 curNum=Integer.parseInt(strNumbers[i]);
-            }
-            catch (Exception d){
-                JOptionPane.showMessageDialog(null, "Ошибка ввода");
-                throw new IllegalArgumentException();
-            }
+
 
             if ((curNum >= 0) && (curNum <= 100)) {
 
                 arr[i] = curNum;
             }
             else {
-                JOptionPane.showMessageDialog(null, "Можно вводить только от 1 до 100 без повторений");
-                throw new IllegalArgumentException();
+
+                throw new IllegalArgumentException("Можно вводить только числа от 1 до 100");
             }
         }
     }
@@ -145,14 +141,22 @@ public class Form extends JFrame {
     private void initListeners() {
         getResult.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                getData();
-                Task t=new Task(arr);
-                int res = t.getAnswer();
-                if (res == -1)
-                    JOptionPane.showMessageDialog(null,"Нет, невозможно получить 1 мл");
-                else
-                    JOptionPane.showMessageDialog(null,"Да, можно получить 1 мл.\nКол-во шагов: "+res);
-            }
+                try {
+                    getData();
+                    Task t=new Task(arr);
+                    int res = t.getAnswer();
+                    if (res == -1)
+                        JOptionPane.showMessageDialog(null,"Нет, невозможно получить 1 мл");
+                    else
+                        JOptionPane.showMessageDialog(null,"Да, можно получить 1 мл.\nКол-во шагов: "+res);
+                }
+                catch (NumberFormatException d) {
+                    System.out.println("Ошибка ввода");
+                }
+                catch (IllegalArgumentException d) {
+                    System.out.println(d.getMessage());
+                }
+         }
         });
     }
 
