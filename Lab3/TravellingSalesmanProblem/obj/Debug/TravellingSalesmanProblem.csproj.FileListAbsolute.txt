@@ -1,0 +1,31 @@
+D:\VSU HW\5 семестр\Комбинаторные алгоритмы\Travelling-salesman-problem-master\TravellingSalesmanProblem\bin\Debug\TravellingSalesmanProblem.exe.config
+D:\VSU HW\5 семестр\Комбинаторные алгоритмы\Travelling-salesman-problem-master\TravellingSalesmanProblem\bin\Debug\TravellingSalesmanProblem.exe
+D:\VSU HW\5 семестр\Комбинаторные алгоритмы\Travelling-salesman-problem-master\TravellingSalesmanProblem\bin\Debug\TravellingSalesmanProblem.pdb
+D:\VSU HW\5 семестр\Комбинаторные алгоритмы\Travelling-salesman-problem-master\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.csprojResolveAssemblyReference.cache
+D:\VSU HW\5 семестр\Комбинаторные алгоритмы\Travelling-salesman-problem-master\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.MainForm.resources
+D:\VSU HW\5 семестр\Комбинаторные алгоритмы\Travelling-salesman-problem-master\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.Properties.Resources.resources
+D:\VSU HW\5 семестр\Комбинаторные алгоритмы\Travelling-salesman-problem-master\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.csproj.GenerateResource.Cache
+D:\VSU HW\5 семестр\Комбинаторные алгоритмы\Travelling-salesman-problem-master\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.csproj.CoreCompileInputs.cache
+D:\VSU HW\5 семестр\Комбинаторные алгоритмы\Travelling-salesman-problem-master\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.exe
+D:\VSU HW\5 семестр\Комбинаторные алгоритмы\Travelling-salesman-problem-master\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.pdb
+C:\учеба\Лабы\Travelling-salesman-problem-master\TravellingSalesmanProblem\bin\Debug\TravellingSalesmanProblem.exe.config
+C:\учеба\Лабы\Travelling-salesman-problem-master\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.exe
+C:\учеба\Лабы\Travelling-salesman-problem-master\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.pdb
+C:\учеба\Лабы\Travelling-salesman-problem-master\TravellingSalesmanProblem\bin\Debug\TravellingSalesmanProblem.exe
+C:\учеба\Лабы\Travelling-salesman-problem-master\TravellingSalesmanProblem\bin\Debug\TravellingSalesmanProblem.pdb
+C:\учеба\Лабы\Travelling-salesman-problem-master\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.csprojResolveAssemblyReference.cache
+C:\учеба\Лабы\Travelling-salesman-problem-master\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.MainForm.resources
+C:\учеба\Лабы\Travelling-salesman-problem-master\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.Properties.Resources.resources
+C:\учеба\Лабы\Travelling-salesman-problem-master\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.csproj.GenerateResource.Cache
+C:\учеба\Лабы\KombLabs\Новая папка\TravellingSalesmanProblem\bin\Debug\TravellingSalesmanProblem.exe.config
+C:\учеба\Лабы\KombLabs\Новая папка\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.exe
+C:\учеба\Лабы\KombLabs\Новая папка\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.pdb
+C:\учеба\Лабы\KombLabs\Lab3\TravellingSalesmanProblem\bin\Debug\TravellingSalesmanProblem.exe.config
+C:\учеба\Лабы\KombLabs\Lab3\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.exe
+C:\учеба\Лабы\KombLabs\Lab3\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.pdb
+C:\учеба\Лабы\KombLabs\Lab3\TravellingSalesmanProblem\bin\Debug\TravellingSalesmanProblem.exe
+C:\учеба\Лабы\KombLabs\Lab3\TravellingSalesmanProblem\bin\Debug\TravellingSalesmanProblem.pdb
+C:\учеба\Лабы\KombLabs\Lab3\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.csprojResolveAssemblyReference.cache
+C:\учеба\Лабы\KombLabs\Lab3\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.MainForm.resources
+C:\учеба\Лабы\KombLabs\Lab3\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.Properties.Resources.resources
+C:\учеба\Лабы\KombLabs\Lab3\TravellingSalesmanProblem\obj\Debug\TravellingSalesmanProblem.csproj.GenerateResource.Cache
